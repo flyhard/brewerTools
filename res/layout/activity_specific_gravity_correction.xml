@@ -54,7 +54,7 @@
         android:layout_alignBaseline="@+id/ogValue"
         android:layout_toRightOf="@+id/ogValue"
         android:text="@string/sg_short"
-        android:textIsSelectable="true" />
+        android:textIsSelectable="false" />
 
     <RadioGroup
         android:id="@+id/measurementEquipmentSelector"
@@ -84,5 +84,14 @@
         android:layout_below="@+id/measurementEquipmentSelector"
         android:ems="10"
         android:inputType="numberDecimal" />
+    
+    <TextView
+        android:id="@+id/measuredUnitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/measuredValue"
+        android:layout_toRightOf="@+id/measuredValue"
+        android:text="@string/sg_short"
+        android:textIsSelectable="false" />
 
 </RelativeLayout>
