@@ -44,16 +44,45 @@
         android:ems="10"
         android:inputType="numberDecimal" >
 
-        <requestFocus />
+        <requestFocus android:layout_height="wrap_content" />
     </EditText>
 
     <TextView
         android:id="@+id/ogUnitLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/ogValue"
         android:layout_alignBaseline="@+id/ogValue"
+        android:layout_toRightOf="@+id/ogValue"
         android:text="@string/sg_short"
         android:textIsSelectable="true" />
+
+    <RadioGroup
+        android:id="@+id/measurementEquipmentSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ogValue" >
+
+        <RadioButton
+            android:id="@+id/refractometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/refractometer" />
+
+        <RadioButton
+            android:id="@+id/hydrometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hydrometer" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/measuredValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/measuredValue"
+        android:layout_below="@+id/measurementEquipmentSelector"
+        android:ems="10"
+        android:inputType="numberDecimal" />
 
 </RelativeLayout>

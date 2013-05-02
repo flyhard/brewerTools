@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Maven Quickstart</string>
+    <string name="app_name">Specific Gravity Correction</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_specific_gravity_correction">SpecificGravityCorrection</string>
     <string name="og">Original Gravity</string>
     <string name="sg">Specific Gravity</string>
     <string name="brix">Brix</string>
     <string name="sg_short">SG</string>
+    <string name="refractometer">Refractometer</string>
+    <string name="hydrometer">Hydrometer</string>
 
 </resources>
