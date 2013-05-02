@@ -12,8 +12,10 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <activity android:name=".HelloAndroidActivity" >
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.abich.brewertools.SpecificGravityCorrection"
+            android:label="@string/title_activity_specific_gravity_correction" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

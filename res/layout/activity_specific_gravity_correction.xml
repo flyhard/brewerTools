@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SpecificGravityCorrection" >
+
+    <RadioGroup
+        android:id="@+id/unitSelectionGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/sg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/sg" />
+
+        <RadioButton
+            android:id="@+id/brix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/brix" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/ogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unitSelectionGroup"
+        android:text="@string/og" />
+
+    <EditText
+        android:id="@+id/ogValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ogValue"
+        android:layout_below="@+id/ogLabel"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/ogUnitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ogValue"
+        android:layout_alignBaseline="@+id/ogValue"
+        android:text="@string/sg_short"
+        android:textIsSelectable="true" />
+
+</RelativeLayout>
