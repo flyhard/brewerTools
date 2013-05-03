@@ -11,11 +11,16 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<platform.version> 4.1.1.4
-			</platform.version>
+		</platform.version>
 		<android.plugin.version>3.5.3</android.plugin.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
@@ -43,7 +48,7 @@
 					<sdk>
 						<platform>17</platform>
 					</sdk>
-									</configuration>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
