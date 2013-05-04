@@ -1,6 +1,8 @@
 package com.abich.brewertools;
 
 import java.text.MessageFormat;
+import java.text.NumberFormat;
+import java.text.ParseException;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -74,13 +76,19 @@ public class SpecificGravityCorrection extends Activity {
 			public void onTextChanged(final CharSequence s, final int start,
 					final int before, final int count) {
 				Log.d(TAG, "Updating OG value to " + s);
-				final Double value = Double.parseDouble(s.toString());
-				if (sgButton.isChecked()) {
-					og = Optional.of(new SpecificGravity(value));
-				} else {
-					og = Optional.of(new Brix(value));
+				final Double value;
+				try {
+					value = NumberFormat.getInstance().parse(s.toString())
+							.doubleValue();
+					if (sgButton.isChecked()) {
+						og = Optional.of(new SpecificGravity(value));
+					} else {
+						og = Optional.of(new Brix(value));
+					}
+					calculateCorrectedGravity();
+				} catch (final ParseException e) {
+					Log.e(TAG, Log.getStackTraceString(e));
 				}
-				calculateCorrectedGravity();
 			}
 
 		});
@@ -89,13 +97,19 @@ public class SpecificGravityCorrection extends Activity {
 			@Override
 			public void onTextChanged(final CharSequence s, final int start,
 					final int before, final int count) {
-				final Double value = Double.parseDouble(s.toString());
-				if (sgButton.isChecked()) {
-					mg = Optional.of(new SpecificGravity(value));
-				} else {
-					mg = Optional.of(new Brix(value));
+				final Double value;
+				try {
+					value = NumberFormat.getInstance().parse(s.toString())
+							.doubleValue();
+					if (sgButton.isChecked()) {
+						mg = Optional.of(new SpecificGravity(value));
+					} else {
+						mg = Optional.of(new Brix(value));
+					}
+					calculateCorrectedGravity();
+				} catch (final ParseException e) {
+					Log.e(TAG, Log.getStackTraceString(e));
 				}
-				calculateCorrectedGravity();
 			}
 
 		});
