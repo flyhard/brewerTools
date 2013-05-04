@@ -4,7 +4,7 @@ public class Brix extends Density {
 
 	private final double value;
 
-	public Brix(double brix) {
+	public Brix(final double brix) {
 		value = brix;
 	}
 
@@ -15,7 +15,7 @@ public class Brix extends Density {
 
 	@Override
 	public String getLabel() {
-		return "�Brix";
+		return "\u00B0Brix";
 	}
 
 	@Override

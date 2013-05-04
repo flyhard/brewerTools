@@ -11,13 +11,15 @@
     <RadioGroup
         android:id="@+id/unitSelectionGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
         <RadioButton
             android:id="@+id/sg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:onClick="setUnitType"
             android:text="@string/sg" />
 
         <RadioButton
@@ -25,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
+            android:onClick="setUnitType"
             android:text="@string/brix" />
     </RadioGroup>
 
@@ -32,7 +35,7 @@
         android:id="@+id/ogLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/unitSelectionGroup"
+        android:layout_below="@id/unitSelectionGroup"
         android:text="@string/og" />
 
     <EditText
@@ -44,23 +47,25 @@
         android:ems="10"
         android:inputType="numberDecimal" >
 
-        <requestFocus android:layout_height="wrap_content" />
+        <requestFocus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </EditText>
 
     <TextView
         android:id="@+id/ogUnitLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/ogValue"
-        android:layout_toRightOf="@+id/ogValue"
-        android:text="@string/sg_short"
+        android:layout_alignBaseline="@id/ogValue"
+        android:layout_toRightOf="@id/ogValue"
         android:textIsSelectable="false" />
 
     <RadioGroup
         android:id="@+id/measurementEquipmentSelector"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ogValue" >
+        android:layout_below="@id/ogValue"
+        android:orientation="horizontal" >
 
         <RadioButton
             android:id="@+id/refractometer"
@@ -80,18 +85,44 @@
         android:id="@+id/measuredValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/measuredValue"
-        android:layout_below="@+id/measurementEquipmentSelector"
+        android:layout_alignLeft="@id/measuredValue"
+        android:layout_below="@id/measurementEquipmentSelector"
         android:ems="10"
         android:inputType="numberDecimal" />
-    
+
     <TextView
         android:id="@+id/measuredUnitLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/measuredValue"
-        android:layout_toRightOf="@+id/measuredValue"
-        android:text="@string/sg_short"
+        android:layout_alignBaseline="@id/measuredValue"
+        android:layout_toRightOf="@id/measuredValue"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:id="@+id/correctedGravityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/measuredValue"
+        android:layout_below="@+id/measuredValue"
+        android:layout_marginTop="26dp"
+        android:text="@string/correctedGravity" />
+
+    <EditText
+        android:id="@+id/correctedGravity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/correctedGravityLabel"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:id="@+id/correctedGravityUnitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/correctedGravity"
+        android:layout_toRightOf="@id/correctedGravity"
         android:textIsSelectable="false" />
 
 </RelativeLayout>
