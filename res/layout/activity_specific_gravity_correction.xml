@@ -44,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/ogValue"
         android:layout_below="@+id/ogLabel"
+        android:digits="0123456789,."
         android:ems="10"
         android:inputType="numberDecimal" >
 
@@ -87,6 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/measuredValue"
         android:layout_below="@id/measurementEquipmentSelector"
+        android:digits="0123456789,."
         android:ems="10"
         android:inputType="numberDecimal" />
 
@@ -112,6 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/correctedGravityLabel"
+        android:digits="0123456789,."
         android:ems="10"
         android:enabled="false"
         android:inputType="numberDecimal"
