@@ -255,7 +255,8 @@
 		</profile>
 	</profiles>
 	<scm>
-		<url>scm:git:https://github.com/flyhard/brewerTools.git</url>
+		<url>https://github.com/flyhard/brewerTools</url>
 		<connection>scm:git:https://github.com/flyhard/brewerTools.git</connection>
+		<developerConnection>scm:git:git@github.com:flyhard/brewerTools.git</developerConnection>
 	</scm>
 </project>
