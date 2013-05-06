@@ -73,12 +73,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:onClick="setEquipmentType"
             android:text="@string/refractometer" />
 
         <RadioButton
             android:id="@+id/hydrometer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="setEquipmentType"
             android:text="@string/hydrometer" />
     </RadioGroup>
 

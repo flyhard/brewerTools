@@ -118,7 +118,7 @@ public class SpecificGravityCorrection extends Activity {
 
 	public void setUnitType(final View view) {
 		assert view instanceof RadioButton;
-		Log.d(TAG, "eventhandler started");
+		Log.d(TAG, "eventhandler 'setUnitType' started");
 		final boolean checked = ((RadioButton) view).isChecked();
 		switch (view.getId()) {
 		case R.id.sg:
@@ -142,6 +142,23 @@ public class SpecificGravityCorrection extends Activity {
 		}
 
 		updateDisplayedValuesAndLabels();
+	}
+	
+	public void setEquipmentType(View view){
+		assert view instanceof RadioButton;
+		Log.d(TAG, "eventhandler 'setEquipmentType' started");
+		final boolean checked = ((RadioButton) view).isChecked();
+		switch (view.getId()) {
+		case R.id.refractometer:
+			if(checked){
+			}
+			break;
+		case R.id.hydrometer:
+			if(checked){
+				
+			}
+			break;
+		}
 	}
 
 	private void updateDisplayedValuesAndLabels() {
