@@ -115,7 +115,7 @@
 				<configuration>
 					<goals>android:manifest-update install</goals>
 					<preparationGoals>clean verify android:manifest-update</preparationGoals>
-					<!-- <pushChanges>false</pushChanges> -->
+					<completionGoals>android:manifest-update</completionGoals>
 				</configuration>
 			</plugin>
 			<plugin>
