@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.abich</groupId>
 	<artifactId>BrewerTools</artifactId>
-	<version>1.4-SNAPSHOT</version>
+	<version>1.4</version>
 	<packaging>apk</packaging>
 	<name>BrewerTools</name>
 
@@ -271,5 +271,6 @@
 		<url>https://github.com/flyhard/brewerTools</url>
 		<connection>scm:git:git@github.com:flyhard/brewerTools.git</connection>
 		<developerConnection>scm:git:https://github.com/flyhard/brewerTools.git</developerConnection>
-	</scm>
+	  <tag>BrewerTools-1.4</tag>
+  </scm>
 </project>
