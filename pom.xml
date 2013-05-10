@@ -46,7 +46,8 @@
 						</sdk>
 						<undeployBeforeDeploy>false</undeployBeforeDeploy>
 						<manifest>
-							<versionCodeUpdateFromVersion>true</versionCodeUpdateFromVersion>
+							<manifestVersionCodeUpdateFromVersion>true</manifestVersionCodeUpdateFromVersion>
+							<manifestVersionCodeAutoIncrement>true</manifestVersionCodeAutoIncrement>
 						</manifest>
 					</configuration>
 				</plugin>
